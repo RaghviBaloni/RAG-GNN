@@ -1,0 +1,41 @@
+
+Namespace(model_name='graph_llm', project='project_g_retriever', seed=0, dataset='expla_graphs', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='7b', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+Loading LLAMA
+/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/cuda/__init__.py:546: UserWarning: Can't initialize NVML
+  warnings.warn("Can't initialize NVML")
+Loading checkpoint shards: 100%|████████| 2/2 [00:00<00:00,  6.74it/s]
+  0%|                                        | 0/2070 [00:00<?, ?it/s]
+Freezing LLAMA!
+Finish loading LLAMA!
+  0%|                                        | 0/2070 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "/home/ec2-user/SageMaker/G-Retriever/train.py", line 139, in <module>
+    main(args)
+  File "/home/ec2-user/SageMaker/G-Retriever/train.py", line 68, in main
+    loss = model(batch)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/SageMaker/G-Retriever/src/model/graph_llm.py", line 165, in forward
+    outputs = self.model(
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 1211, in forward
+    outputs = self.model(
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 1018, in forward
+    layer_outputs = decoder_layer(
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 741, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/models/llama/modeling_llama.py", line 351, in forward
+    query_states = self.q_proj(hidden_states)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/ec2-user/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: expected scalar type Float but found Half

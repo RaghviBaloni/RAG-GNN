@@ -1,0 +1,50 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-05-13T04:14:40.901502",
+    "startedAt": "2024-05-13T04:14:39.568044",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--dataset",
+        "expla_graphs",
+        "--model_name",
+        "graph_llm"
+    ],
+    "state": "running",
+    "program": "E:\\Project\\G-Retriever\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/XiaoxinHe/G-Retriever",
+        "commit": "a4baacdd5c2d12460b3881eb63b9b376e4ea18c3"
+    },
+    "email": "92228417+RaghviBaloni@users.noreply.github.com",
+    "root": "E:/Project/G-Retriever",
+    "host": "LAPTOP-IDN2KEVB",
+    "username": "Raghvi Baloni",
+    "executable": "C:\\Users\\Raghvi Baloni\\.conda\\envs\\g_retriever\\python.exe",
+    "cpu_count": 4,
+    "cpu_count_logical": 8,
+    "cpu_freq": {
+        "current": 991.0,
+        "min": 0.0,
+        "max": 1190.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 991.0,
+            "min": 0.0,
+            "max": 1190.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 310.50292587280273,
+            "used": 60.58896255493164
+        }
+    },
+    "memory": {
+        "total": 7.7830047607421875
+    }
+}

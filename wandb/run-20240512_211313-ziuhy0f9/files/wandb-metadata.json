@@ -1,0 +1,55 @@
+{
+    "os": "Linux-5.10.215-203.850.amzn2.x86_64-x86_64-with-glibc2.26",
+    "python": "3.9.19",
+    "heartbeatAt": "2024-05-12T21:13:14.291467",
+    "startedAt": "2024-05-12T21:13:13.862528",
+    "docker": null,
+    "cuda": null,
+    "args": [
+        "--dataset",
+        "expla_graphs",
+        "--model_name",
+        "graph_llm"
+    ],
+    "state": "running",
+    "program": "/home/ec2-user/SageMaker/G-Retriever/train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/XiaoxinHe/G-Retriever",
+        "commit": "a4baacdd5c2d12460b3881eb63b9b376e4ea18c3"
+    },
+    "email": null,
+    "root": "/home/ec2-user/SageMaker/G-Retriever",
+    "host": "ip-172-16-14-16.ec2.internal",
+    "username": "ec2-user",
+    "executable": "/home/ec2-user/anaconda3/envs/g_retriever/bin/python",
+    "cpu_count": 1,
+    "cpu_count_logical": 2,
+    "cpu_freq": {
+        "current": 3099.9355,
+        "min": 0.0,
+        "max": 0.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3099.917,
+            "min": 0.0,
+            "max": 0.0
+        },
+        {
+            "current": 3099.954,
+            "min": 0.0,
+            "max": 0.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 134.98826217651367,
+            "used": 111.587890625
+        }
+    },
+    "memory": {
+        "total": 15.325126647949219
+    }
+}

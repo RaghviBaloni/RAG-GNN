@@ -1,0 +1,43 @@
+
+Namespace(model_name='graph_llm', project='project_g_retriever', seed=0, dataset='expla_graphs', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='7b', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+Loading LLAMA
+C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\huggingface_hub\file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:  50%|██████████▌          | 1/2 [00:00<00:00,  3.09it/s]
+Freezing LLAMA!
+Finish loading LLAMA!
+Loading checkpoint shards: 100%|█████████████████████| 2/2 [00:00<00:00,  2.98it/s]
+generation_config.json: 100%|█████████████████████| 188/188 [00:00<00:00, 62.3kB/s]
+C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\huggingface_hub\file_download.py:157: UserWarning: `huggingface_hub` cache-system uses symlinks by default to efficiently store duplicated files but your machine does not support them in C:\Users\Raghvi Baloni\.cache\huggingface\hub\models--meta-llama--Llama-2-7b-hf. Caching files will still work but in a degraded version that might require more space on your disk. This warning can be disabled by setting the `HF_HUB_DISABLE_SYMLINKS_WARNING` environment variable. For more details, see https://huggingface.co/docs/huggingface_hub/how-to-cache#limitations.
+To support symlinks on Windows, you either need to activate Developer Mode or to run Python as an administrator. In order to see activate developer mode, see this article: https://docs.microsoft.com/en-us/windows/apps/get-started/enable-your-device-for-development
+  warnings.warn(message)
+  0%|                                                     | 0/2070 [00:00<?, ?it/s]Traceback (most recent call last):
+  File "E:\Project\G-Retriever\train.py", line 139, in <module>
+    main(args)
+  File "E:\Project\G-Retriever\train.py", line 68, in main
+    loss = model(batch)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "E:\Project\G-Retriever\src\model\graph_llm.py", line 164, in forward
+    outputs = self.model(
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\transformers\models\llama\modeling_llama.py", line 1211, in forward
+    outputs = self.model(
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\transformers\models\llama\modeling_llama.py", line 1018, in forward
+    layer_outputs = decoder_layer(
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\transformers\models\llama\modeling_llama.py", line 741, in forward
+    hidden_states, self_attn_weights, present_key_value = self.self_attn(
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\transformers\models\llama\modeling_llama.py", line 351, in forward
+    query_states = self.q_proj(hidden_states)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\Raghvi Baloni\.conda\envs\g_retriever\lib\site-packages\torch\nn\modules\linear.py", line 114, in forward
+    return F.linear(input, self.weight, self.bias)
+RuntimeError: expected scalar type Float but found Half

@@ -1,0 +1,188 @@
+2024-05-10 20:13:20,457 INFO    StreamThr :3870 [internal.py:wandb_internal():85] W&B internal server running at pid: 3870, started at: 2024-05-10 20:13:20.456393
+2024-05-10 20:13:20,461 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status
+2024-05-10 20:13:20,463 INFO    WriterThread:3870 [datastore.py:open_for_write():87] open: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/run-b05yzy95.wandb
+2024-05-10 20:13:20,463 DEBUG   SenderThread:3870 [sender.py:send():378] send: header
+2024-05-10 20:13:20,481 DEBUG   SenderThread:3870 [sender.py:send():378] send: run
+2024-05-10 20:13:20,679 INFO    SenderThread:3870 [dir_watcher.py:__init__():211] watching files in: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files
+2024-05-10 20:13:20,679 INFO    SenderThread:3870 [sender.py:_start_run_threads():1123] run started: b05yzy95 with start time 1715372000.45663
+2024-05-10 20:13:20,689 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: check_version
+2024-05-10 20:13:20,689 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: check_version
+2024-05-10 20:13:20,735 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: run_start
+2024-05-10 20:13:20,775 ERROR   HandlerThread:3870 [gpu.py:is_available():381] Error initializing NVML: Driver Not Loaded
+2024-05-10 20:13:20,783 DEBUG   HandlerThread:3870 [system_info.py:__init__():26] System info init
+2024-05-10 20:13:20,783 DEBUG   HandlerThread:3870 [system_info.py:__init__():41] System info init done
+2024-05-10 20:13:20,783 INFO    HandlerThread:3870 [system_monitor.py:start():194] Starting system monitor
+2024-05-10 20:13:20,783 INFO    SystemMonitor:3870 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-10 20:13:20,783 INFO    HandlerThread:3870 [system_monitor.py:probe():214] Collecting system info
+2024-05-10 20:13:20,784 INFO    SystemMonitor:3870 [interfaces.py:start():188] Started cpu monitoring
+2024-05-10 20:13:20,785 INFO    SystemMonitor:3870 [interfaces.py:start():188] Started disk monitoring
+2024-05-10 20:13:20,785 INFO    SystemMonitor:3870 [interfaces.py:start():188] Started memory monitoring
+2024-05-10 20:13:20,786 INFO    SystemMonitor:3870 [interfaces.py:start():188] Started network monitoring
+2024-05-10 20:13:20,788 DEBUG   HandlerThread:3870 [system_info.py:probe():150] Probing system
+2024-05-10 20:13:20,793 DEBUG   HandlerThread:3870 [system_info.py:_probe_git():135] Probing git
+2024-05-10 20:13:20,804 DEBUG   HandlerThread:3870 [system_info.py:_probe_git():143] Probing git done
+2024-05-10 20:13:20,804 DEBUG   HandlerThread:3870 [system_info.py:probe():198] Probing system done
+2024-05-10 20:13:20,804 DEBUG   HandlerThread:3870 [system_monitor.py:probe():223] {'os': 'Linux-5.10.214-202.855.amzn2.x86_64-x86_64-with-glibc2.26', 'python': '3.9.19', 'heartbeatAt': '2024-05-10T20:13:20.788858', 'startedAt': '2024-05-10T20:13:20.452023', 'docker': None, 'cuda': None, 'args': ('--dataset', 'expla_graphs', '--model_name', 'inference_llm', '--llm_model_name', '7b_chat'), 'state': 'running', 'program': '/home/ec2-user/SageMaker/G-Retriever/inference.py', 'codePathLocal': 'inference.py', 'codePath': 'inference.py', 'git': {'remote': 'https://github.com/XiaoxinHe/G-Retriever', 'commit': 'a4baacdd5c2d12460b3881eb63b9b376e4ea18c3'}, 'email': None, 'root': '/home/ec2-user/SageMaker/G-Retriever', 'host': 'ip-172-16-51-180.ec2.internal', 'username': 'ec2-user', 'executable': '/home/ec2-user/anaconda3/envs/g_retriever/bin/python', 'cpu_count': 1, 'cpu_count_logical': 2, 'cpu_freq': {'current': 3099.9325, 'min': 0.0, 'max': 0.0}, 'cpu_freq_per_core': [{'current': 3099.951, 'min': 0.0, 'max': 0.0}, {'current': 3099.914, 'min': 0.0, 'max': 0.0}], 'disk': {'/': {'total': 134.98826217651367, 'used': 100.56389236450195}}, 'memory': {'total': 15.325126647949219}}
+2024-05-10 20:13:20,804 INFO    HandlerThread:3870 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-10 20:13:20,804 INFO    HandlerThread:3870 [system_monitor.py:probe():227] Publishing system info
+2024-05-10 20:13:20,804 DEBUG   HandlerThread:3870 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-10 20:13:21,682 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/conda-environment.yaml
+2024-05-10 20:13:23,275 DEBUG   HandlerThread:3870 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-10 20:13:23,275 INFO    HandlerThread:3870 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-10 20:13:23,278 DEBUG   SenderThread:3870 [sender.py:send():378] send: files
+2024-05-10 20:13:23,278 INFO    SenderThread:3870 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-10 20:13:23,358 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-10 20:13:23,359 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: python_packages
+2024-05-10 20:13:23,359 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:13:23,359 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:13:23,505 DEBUG   SenderThread:3870 [sender.py:send():378] send: telemetry
+2024-05-10 20:13:23,530 INFO    wandb-upload_0:3870 [upload_job.py:push():130] Uploaded file /tmp/tmpz2sazy2gwandb/un0oqepj-wandb-metadata.json
+2024-05-10 20:13:23,680 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/conda-environment.yaml
+2024-05-10 20:13:23,680 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:23,681 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/wandb-metadata.json
+2024-05-10 20:13:23,681 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_created():271] file/dir created: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/requirements.txt
+2024-05-10 20:13:25,681 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:26,071 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:27,681 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:29,683 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:31,075 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:31,684 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:33,685 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:35,687 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:36,176 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:37,687 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:38,359 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:13:38,359 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:13:39,688 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:41,193 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:41,688 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:43,689 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:45,690 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:46,219 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:47,691 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:49,691 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:51,259 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:51,692 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/config.yaml
+2024-05-10 20:13:51,693 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:53,359 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:13:53,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:13:53,693 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:55,694 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:56,437 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:13:57,695 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:13:59,695 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:01,493 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:01,696 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:03,696 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:05,697 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:06,597 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:07,697 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:08,359 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:14:08,359 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:14:09,698 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:11,613 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:11,698 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:13,699 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:15,700 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:16,725 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:17,701 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:19,701 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:20,786 DEBUG   SystemMonitor:3870 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-10 20:14:20,787 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:14:21,702 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:21,842 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:23,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:14:23,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:14:23,703 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:25,704 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:26,889 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:27,704 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:29,705 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:31,705 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:32,026 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:33,706 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:35,707 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:37,092 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:37,707 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:38,359 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:14:38,359 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:14:39,708 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:41,709 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:42,142 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:43,709 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:45,710 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:47,164 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:47,711 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:49,711 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:50,787 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:14:51,712 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:52,606 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:14:53,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:14:53,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:14:53,713 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:14:58,431 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:03,431 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:08,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:15:08,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:15:08,462 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:13,461 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:18,462 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:20,788 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:15:23,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:15:23,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:15:23,477 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:28,478 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:33,478 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:38,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:15:38,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:15:38,496 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:43,497 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:48,497 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:50,788 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:15:53,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:15:53,360 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:15:53,525 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:15:58,526 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:03,526 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:08,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:16:08,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:16:09,421 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:14,422 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:19,423 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:20,789 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:16:23,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:16:23,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:16:25,056 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:25,739 INFO    Thread-12 :3870 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/ec2-user/SageMaker/G-Retriever/wandb/run-20240510_201320-b05yzy95/files/output.log
+2024-05-10 20:16:30,057 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:35,058 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:38,360 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:16:38,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:16:40,471 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:45,473 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:50,474 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:16:50,790 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:16:53,361 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:16:53,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:16:55,482 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:00,482 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:05,483 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:08,361 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:17:08,361 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:17:11,468 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:16,469 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:20,790 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:17:21,791 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:23,361 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:17:23,362 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:17:27,515 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:32,517 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:37,518 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:38,361 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-10 20:17:38,362 DEBUG   SenderThread:3870 [sender.py:send_request():405] send_request: stop_status
+2024-05-10 20:17:42,651 DEBUG   HandlerThread:3870 [handler.py:handle_request():158] handle_request: status_report
+2024-05-10 20:17:43,652 INFO    cpu       :3870 [interfaces.py:monitor():138] Process cpu has exited.
+2024-05-10 20:17:43,652 DEBUG   SystemMonitor:3870 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-10 20:17:43,653 DEBUG   SystemMonitor:3870 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-10 20:17:43,659 DEBUG   SenderThread:3870 [sender.py:send():378] send: stats
+2024-05-10 20:17:44,641 INFO    MainThread:3870 [internal.py:handle_exit():75] Internal process exited
