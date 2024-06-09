@@ -1,0 +1,29 @@
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='goodreads', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='claude', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+inherit model weights from sentence-transformers/all-roberta-large-v1
+100%|██████████████████████████████████████| 3600/3600 [00:00<00:00, 1527052.43it/s]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+  0%|                                                         | 0/1 [00:00<?, ?it/s]
+[{'id': ['25137862', '25150020'], 'pred': [[" Unfortunately, the given network data does not contain enough information to predict the genres of the specific books 'FREEFALL (The Indigo Lounge Series Book 5)' and 'Bless This Love'. The node and edge data provides some information about book ids, shelves, and connections, but does not include any details about book titles or genres. \n\nTo make an accurate genre prediction, we would need additional data such as:\n\n- A mapping of book ids to titles and authors\n- Genre or other metadata for each book \n- More contextual data about the relationships between books, shelves, etc.\n\nWithout those details, it's impossible to reliably determine which books correspond to 'FREEFALL (The Indigo Lounge Series Book 5)' and 'Bless This Love' in this data, let alone predict their genres. More comprehensive book catalog data would be needed to provide an insightful 60 word prediction for each.", " Unfortunately, the given network data does not contain enough information to predict the genres of the specific books 'FREEFALL (The Indigo Lounge Series Book 5)' and 'Bless This Love'. The node and edge data provides some information about book ids, shelves, and connections, but does not include any details about book titles or genres. \n\nTo make an accurate genre prediction, we would need additional data such as:\n\n- A mapping of book ids to titles and authors\n- Genre or other metadata for each book \n- More contextual data about the relationships between books, shelves, etc.\n\nWithout those details, it's impossible to reliably determine which books correspond to 'FREEFALL (The Indigo Lounge Series Book 5)' and 'Bless This Love' in this data, let alone predict their genres. More comprehensive book catalog data would be needed to provide an insightful 60 word prediction for each."]], 'label': ['r|o|m|a|n|c|e', 'r|o|m|a|n|c|e'], 'question': ["Predict the genre (fiction, non-fiction or romance) of the book 'FREEFALL (The Indigo Lounge Series Book 5)'. Answer precisely (60 words)", "Predict the genre (fiction, non-fiction or romance) of the book 'Bless This Love'. Answer precisely (60 words)"], 'desc': ['node_attr,node_id\nnext-books-to-read,59\nbooks,73\nindigo-lounge-by-zara-cox,86\nmust-read-next,92\n\nsrc,edge_attr,dst\n25137862,shelf,92\n25137862,shelf,86\n25137862,shelf,59\n', 'node_attr,node_id\n7027989,0\nto-read,1\ncurrently-reading,2\n,4\n\nsrc,edge_attr,dst\n']}]
+Key: id, Length: 2
+Key: pred, Length: 1
+Key: label, Length: 2
+Key: question, Length: 2
+100%|█████████████████████████████████████████████████| 1/1 [00:07<00:00,  7.44s/it]Traceback (most recent call last):
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 65, in <module>
+    main(args)
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 56, in main
+    acc = eval_funcs[args.dataset](eval_output, path)
+  File "/home_ssd2/raghvib/RAG-GNN/src/utils/evaluate.py", line 100, in get_accuracy_goodreads
+    df = pd.concat([pd.DataFrame(d) for d in eval_output])
+  File "/home_ssd2/raghvib/RAG-GNN/src/utils/evaluate.py", line 100, in <listcomp>
+    df = pd.concat([pd.DataFrame(d) for d in eval_output])
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/pandas/core/frame.py", line 778, in __init__
+    mgr = dict_to_mgr(data, index, columns, dtype=dtype, copy=copy, typ=manager)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/pandas/core/internals/construction.py", line 503, in dict_to_mgr
+    return arrays_to_mgr(arrays, columns, index, dtype=dtype, typ=typ, consolidate=copy)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/pandas/core/internals/construction.py", line 114, in arrays_to_mgr
+    index = _extract_index(arrays)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/pandas/core/internals/construction.py", line 677, in _extract_index
+    raise ValueError("All arrays must be of the same length")
+ValueError: All arrays must be of the same length

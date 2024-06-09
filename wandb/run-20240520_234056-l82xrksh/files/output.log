@@ -1,0 +1,42 @@
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='goodreads', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='claude', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=64, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+inherit model weights from sentence-transformers/all-roberta-large-v1
+100%|██████████████████████████████████████| 3600/3600 [00:00<00:00, 1813099.71it/s]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+ 67%|████████████████████████████████▋                | 2/3 [00:17<00:08,  8.29s/it]
+Prcessed Prediction:  Unfortunately, the provided graph data does not contain enough information to predict the genre of the specific books requested. The node and edge data shows related books and shelves, but does not indicate genres. To make an informed prediction, additional data would be needed, such as:
+- Genre labels or descriptions associated with book nodes
+- Genre similarity edges connecting books of the same genre
+- Content/theme data for the requested books from which genre could be inferred
+Without those type of details, I do not have an adequate basis to predict the genre. I'd be happy to revisit my prediction if additional relevant data can be provided. To generate a 60 word prediction, more context is needed. Some key questions:
+- What other books/authors/series are similar to 'FREEFALL' and 'Bless This Love'?
+- What subjects/themes do they cover?
+- Do they share publishers or imprints with other books with known genres?
+With more data related to content and connections, I could likely identify meaningful signals from which to infer a genre and provide a more substantive 60-word prediction. Please let me know if other data is available!
+Processed Answer: ['romance']
+Prcessed Prediction:  Unfortunately, the provided graph data does not contain enough information to predict the genre of the specific books requested. The node and edge data shows related books and shelves, but does not indicate genres. To make an informed prediction, additional data would be needed, such as:
+- Genre labels or descriptions associated with book nodes
+- Genre similarity edges connecting books of the same genre
+- Content/theme data for the requested books from which genre could be inferred
+Without those type of details, I do not have an adequate basis to predict the genre. I'd be happy to revisit my prediction if additional relevant data can be provided. To generate a 60 word prediction, more context is needed. Some key questions:
+- What other books/authors/series are similar to 'FREEFALL' and 'Bless This Love'?
+- What subjects/themes do they cover?
+- Do they share publishers or imprints with other books with known genres?
+With more data related to content and connections, I could likely identify meaningful signals from which to infer a genre and provide a more substantive 60-word prediction. Please let me know if other data is available!
+Processed Answer: ['romance']
+Prcessed Prediction:  Unfortunately I do not have enough information to make accurate genre predictions for those specific books. The input data provided contains node and edge attributes for a graph, but does not include any details about the books "จอมโจรคนงาม (วิวาห์บุปผางาม, #1)" or "World War II Quilts" that would allow me to predict their genres. To make a 60 word genre prediction, I would need some data about the books' contents, themes, writing style, etc. Without any real information about what the books are about, any prediction I could make would just be a guess. Please provide some more context about the books if you would like me to make an informed prediction about their potential genres.
+Processed Answer: ['fiction']
+Prcessed Prediction:  Unfortunately I do not have enough information to make accurate genre predictions for those specific books. The input data provided contains node and edge attributes for a graph, but does not include any details about the books "จอมโจรคนงาม (วิวาห์บุปผางาม, #1)" or "World War II Quilts" that would allow me to predict their genres. To make a 60 word genre prediction, I would need some data about the books' contents, themes, writing style, etc. Without any real information about what the books are about, any prediction I could make would just be a guess. Please provide some more context about the books if you would like me to make an informed prediction about their potential genres.
+Processed Answer: ['non-fiction']
+Prcessed Prediction:  Unfortunately I do not have enough context to make an accurate genre prediction for the book 'Matrimonio De Conveniencia  (The Rancher And The Redhead) (Harlequin Deseo, No 35163)' based on the given graph data and question. The graph data appears to contain node attributes and edge relationships, but does not provide information about the book in question. Without more details on the content or themes of the book, I cannot reliably predict if it falls into the fiction, non-fiction or romance genres. If more information was provided on the plot, characters, or writing style, I may be able to infer the genre. But the 60 word length restriction further limits my ability to make an informed prediction in this case. Please provide more relevant details about the book if you would like me to guess the genre.
+Processed Answer: ['romance']
+Accuracy: 20.0000
+Hit: 20.0000
+Precision: 20.0000
+Recall: 20.0000
+F1: 20.0000
+100%|█████████████████████████████████████████████████| 3/3 [00:23<00:00,  7.79s/it]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(

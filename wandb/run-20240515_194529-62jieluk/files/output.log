@@ -1,0 +1,54 @@
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='expla_graphs', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='phi_3', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+Loading LLAMA
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Special tokens have been added in the vocabulary, make sure the associated word embeddings are fine-tuned or trained.
+`flash-attention` package not found, consider installing for better performance: No module named 'flash_attn'.
+Current `flash-attenton` does not support `window_size`. Either upgrade or use `attn_implementation='eager'`.
+Loading checkpoint shards: 100%|██████████████████████| 2/2 [00:02<00:00,  1.14s/it]
+WARNING:root:Some parameters are on the meta device device because they were offloaded to the cpu.
+  0%|                                                        | 0/70 [00:00<?, ?it/s]WARNING:transformers_modules.microsoft.Phi-3-mini-4k-instruct.920b6cf52a79ecff578cc33f61922b23cbc88115.modeling_phi3:You are not running the flash-attention implementation, expect numerical differences.
+Freezing LLAMA!
+Finish loading LLAMA!
+Traceback (most recent call last):
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 62, in <module>
+    main(args)
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 45, in main
+    output = model.inference(batch)
+  File "/home_ssd2/raghvib/RAG-GNN/src/model/llm.py", line 175, in inference
+    outputs = self.model.generate(
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/utils/_contextlib.py", line 115, in decorate_context
+    return func(*args, **kwargs)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/generation/utils.py", line 1576, in generate
+    result = self._greedy_search(
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/transformers/generation/utils.py", line 2494, in _greedy_search
+    outputs = self(
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home_ssd2/raghvib/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-mini-4k-instruct/920b6cf52a79ecff578cc33f61922b23cbc88115/modeling_phi3.py", line 1286, in forward
+    outputs = self.model(
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_ssd2/raghvib/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-mini-4k-instruct/920b6cf52a79ecff578cc33f61922b23cbc88115/modeling_phi3.py", line 1164, in forward
+    layer_outputs = decoder_layer(
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home_ssd2/raghvib/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-mini-4k-instruct/920b6cf52a79ecff578cc33f61922b23cbc88115/modeling_phi3.py", line 898, in forward
+    hidden_states = self.mlp(hidden_states)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/accelerate/hooks.py", line 166, in new_forward
+    output = module._old_forward(*args, **kwargs)
+  File "/home_ssd2/raghvib/.cache/huggingface/modules/transformers_modules/microsoft/Phi-3-mini-4k-instruct/920b6cf52a79ecff578cc33f61922b23cbc88115/modeling_phi3.py", line 274, in forward
+    up_states = up_states * self.activation_fn(gate)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1501, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/modules/activation.py", line 396, in forward
+    return F.silu(input, inplace=self.inplace)
+  File "/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/nn/functional.py", line 2059, in silu
+    return torch._C._nn.silu(input)
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 50.00 MiB (GPU 0; 10.75 GiB total capacity; 9.95 GiB already allocated; 49.25 MiB free; 10.34 GiB reserved in total by PyTorch) If reserved memory is >> allocated memory try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF

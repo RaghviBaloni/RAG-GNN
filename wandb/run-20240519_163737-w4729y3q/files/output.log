@@ -1,0 +1,28 @@
+100%|██████████████████████████████████████| 3600/3600 [00:00<00:00, 1871992.86it/s]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Loading checkpoint shards:   0%|                              | 0/2 [00:00<?, ?it/s]
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='goodreads', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='7b_chat', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=64, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+inherit model weights from sentence-transformers/all-roberta-large-v1
+Loading checkpoint shards: 100%|██████████████████████| 2/2 [00:02<00:00,  1.46s/it]
+WARNING:root:Some parameters are on the meta device device because they were offloaded to the cpu.
+  0%|                                                         | 0/1 [00:00<?, ?it/s]
+Freezing LLAMA!
+Finish loading LLAMA!
+Raw Model Output: {'id': ['25137862', '25150020'], 'pred': [' Based on the provided graph structure and node attributes, the genre of the book "FREEFALL (The Indigo Lounge Series Book 5)" can be predicted as romance.', ' Based on the given data, I cannot predict the genre of the book "Bless This Love" with precision. The data provided contains only two attributes for each node (book): the ID and the number of times the book has been read. There are no attributes that directly indicate the genre of the book. Therefore'], 'label': ['r|o|m|a|n|c|e', 'r|o|m|a|n|c|e'], 'question': ["Predict the genre (fiction, non-fiction or romance) of the book 'FREEFALL (The Indigo Lounge Series Book 5)'. Answer precisely (1 line)", "Predict the genre (fiction, non-fiction or romance) of the book 'Bless This Love'. Answer precisely (1 line)"], 'desc': ['node_attr,node_id\nnext-books-to-read,59\nbooks,73\nindigo-lounge-by-zara-cox,86\nmust-read-next,92\n\nsrc,edge_attr,dst\n25137862,shelf,92\n25137862,shelf,86\n25137862,shelf,59\n', 'node_attr,node_id\n7027989,0\nto-read,1\ncurrently-reading,2\n,4\n\nsrc,edge_attr,dst\n']}
+Raw Prediction:  Based on the provided graph structure and node attributes, the genre of the book "FREEFALL (The Indigo Lounge Series Book 5)" can be predicted as romance.
+Raw Answer: r|o|m|a|n|c|e
+Prcessed Prediction:  Based on the provided graph structure and node attributes, the genre of the book "FREEFALL (The Indigo Lounge Series Book 5)" can be predicted as romance.
+Processed Answer: ['romance']
+Raw Prediction:  Based on the given data, I cannot predict the genre of the book "Bless This Love" with precision. The data provided contains only two attributes for each node (book): the ID and the number of times the book has been read. There are no attributes that directly indicate the genre of the book. Therefore
+Raw Answer: r|o|m|a|n|c|e
+Prcessed Prediction:  Based on the given data, I cannot predict the genre of the book "Bless This Love" with precision. The data provided contains only two attributes for each node (book): the ID and the number of times the book has been read. There are no attributes that directly indicate the genre of the book. Therefore
+Processed Answer: ['romance']
+Accuracy: 50.0000
+Hit: 50.0000
+Precision: 50.0000
+Recall: 50.0000
+F1: 50.0000
+100%|████████████████████████████████████████████████| 1/1 [02:07<00:00, 128.00s/it]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(

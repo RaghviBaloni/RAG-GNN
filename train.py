@@ -35,6 +35,10 @@ def main(args):
     val_dataset = [dataset[i] for i in idx_split['val']]
     test_dataset = [dataset[i] for i in idx_split['test']]
 
+    # Reduce batch size
+    args.batch_size = args.batch_size // 2
+    args.eval_batch_size = args.eval_batch_size // 2
+
     train_loader = DataLoader(train_dataset, batch_size=args.batch_size, drop_last=True, pin_memory=True, shuffle=True, collate_fn=collate_fn)
     val_loader = DataLoader(val_dataset, batch_size=args.batch_size, drop_last=False, pin_memory=True, shuffle=False, collate_fn=collate_fn)
     test_loader = DataLoader(test_dataset, batch_size=args.eval_batch_size, drop_last=False, pin_memory=True, shuffle=False, collate_fn=collate_fn)

@@ -1,0 +1,345 @@
+2024-05-24 21:35:50,640 INFO    StreamThr :45495 [internal.py:wandb_internal():85] W&B internal server running at pid: 45495, started at: 2024-05-24 21:35:50.639671
+2024-05-24 21:35:50,642 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status
+2024-05-24 21:35:50,644 INFO    WriterThread:45495 [datastore.py:open_for_write():87] open: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/run-onz68c49.wandb
+2024-05-24 21:35:50,645 DEBUG   SenderThread:45495 [sender.py:send():378] send: header
+2024-05-24 21:35:50,661 DEBUG   SenderThread:45495 [sender.py:send():378] send: run
+2024-05-24 21:35:50,952 INFO    SenderThread:45495 [dir_watcher.py:__init__():211] watching files in: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files
+2024-05-24 21:35:50,952 INFO    SenderThread:45495 [sender.py:_start_run_threads():1123] run started: onz68c49 with start time 1716611750.639345
+2024-05-24 21:35:50,961 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: check_version
+2024-05-24 21:35:50,961 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: check_version
+2024-05-24 21:35:51,134 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: run_start
+2024-05-24 21:35:51,152 DEBUG   HandlerThread:45495 [system_info.py:__init__():26] System info init
+2024-05-24 21:35:51,152 DEBUG   HandlerThread:45495 [system_info.py:__init__():41] System info init done
+2024-05-24 21:35:51,152 INFO    HandlerThread:45495 [system_monitor.py:start():194] Starting system monitor
+2024-05-24 21:35:51,152 INFO    SystemMonitor:45495 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-05-24 21:35:51,153 INFO    HandlerThread:45495 [system_monitor.py:probe():214] Collecting system info
+2024-05-24 21:35:51,153 INFO    SystemMonitor:45495 [interfaces.py:start():188] Started cpu monitoring
+2024-05-24 21:35:51,154 INFO    SystemMonitor:45495 [interfaces.py:start():188] Started disk monitoring
+2024-05-24 21:35:51,155 INFO    SystemMonitor:45495 [interfaces.py:start():188] Started gpu monitoring
+2024-05-24 21:35:51,155 INFO    SystemMonitor:45495 [interfaces.py:start():188] Started memory monitoring
+2024-05-24 21:35:51,156 INFO    SystemMonitor:45495 [interfaces.py:start():188] Started network monitoring
+2024-05-24 21:35:51,162 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:51,162 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:51,171 DEBUG   HandlerThread:45495 [system_info.py:probe():150] Probing system
+2024-05-24 21:35:51,176 DEBUG   HandlerThread:45495 [system_info.py:_probe_git():135] Probing git
+2024-05-24 21:35:51,189 DEBUG   HandlerThread:45495 [system_info.py:_probe_git():143] Probing git done
+2024-05-24 21:35:51,189 DEBUG   HandlerThread:45495 [system_info.py:probe():198] Probing system done
+2024-05-24 21:35:51,189 DEBUG   HandlerThread:45495 [system_monitor.py:probe():223] {'os': 'Linux-3.10.0-1160.108.1.el7.x86_64-x86_64-with-glibc2.17', 'python': '3.9.19', 'heartbeatAt': '2024-05-25T04:35:51.171335', 'startedAt': '2024-05-25T04:35:50.635616', 'docker': None, 'cuda': '10.0.130', 'args': ('--dataset', 'goodreads', '--model_name', 'inference_llm', '--llm_model_name', 'claude'), 'state': 'running', 'program': '/home_ssd2/raghvib/RAG-GNN/inference.py', 'codePathLocal': 'inference.py', 'codePath': 'inference.py', 'git': {'remote': 'https://github.com/RaghviBaloni/RAG-GNN', 'commit': '0615b44dbc5345d6aedb63d4f8290843506deadc'}, 'email': None, 'root': '/home_ssd2/raghvib/RAG-GNN', 'host': 'cn34-vcl9', 'username': 'raghvib', 'executable': '/home_ssd2/raghvib/anaconda3/envs/g_retriever/bin/python', 'cpu_count': 16, 'cpu_count_logical': 32, 'cpu_freq': {'current': 2606.25, 'min': 2200.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2800.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}], 'disk': {'/': {'total': 49.9755859375, 'used': 27.871105194091797}}, 'gpu': 'NVIDIA GeForce RTX 2080 Ti', 'gpu_count': 1, 'gpu_devices': [{'name': 'NVIDIA GeForce RTX 2080 Ti', 'memory_total': 11811160064}], 'memory': {'total': 125.84805297851562}}
+2024-05-24 21:35:51,189 INFO    HandlerThread:45495 [system_monitor.py:probe():224] Finished collecting system info
+2024-05-24 21:35:51,189 INFO    HandlerThread:45495 [system_monitor.py:probe():227] Publishing system info
+2024-05-24 21:35:51,189 DEBUG   HandlerThread:45495 [system_info.py:_save_conda():207] Saving list of conda packages installed into the current environment
+2024-05-24 21:35:51,954 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_created():271] file/dir created: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/conda-environment.yaml
+2024-05-24 21:35:53,164 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:53,164 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:54,715 DEBUG   HandlerThread:45495 [system_info.py:_save_conda():222] Saving conda packages done
+2024-05-24 21:35:54,716 INFO    HandlerThread:45495 [system_monitor.py:probe():229] Finished publishing system info
+2024-05-24 21:35:54,719 DEBUG   SenderThread:45495 [sender.py:send():378] send: files
+2024-05-24 21:35:54,719 INFO    SenderThread:45495 [sender.py:_save_file():1389] saving file wandb-metadata.json with policy now
+2024-05-24 21:35:54,823 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: python_packages
+2024-05-24 21:35:54,823 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: python_packages
+2024-05-24 21:35:54,825 DEBUG   SenderThread:45495 [sender.py:send():378] send: telemetry
+2024-05-24 21:35:54,825 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:35:54,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:35:54,953 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/conda-environment.yaml
+2024-05-24 21:35:54,954 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_created():271] file/dir created: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/wandb-metadata.json
+2024-05-24 21:35:54,954 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_created():271] file/dir created: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/requirements.txt
+2024-05-24 21:35:55,063 INFO    wandb-upload_0:45495 [upload_job.py:push():130] Uploaded file /tmp/tmpe9r1t8s0wandb/d0wlqarb-wandb-metadata.json
+2024-05-24 21:35:55,165 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:55,165 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:55,954 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_created():271] file/dir created: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:35:56,003 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:35:57,166 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:57,166 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:57,955 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:35:59,167 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:35:59,167 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:01,168 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:01,169 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:01,677 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:03,170 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:03,170 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:03,957 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:05,171 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:05,171 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:07,172 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:07,172 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:07,242 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:07,959 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:09,173 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:09,173 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:09,824 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:36:09,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:36:11,174 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:11,174 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:11,961 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:13,092 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:13,175 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:13,176 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:15,177 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:15,177 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:17,178 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:17,178 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:17,963 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:19,064 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:19,180 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:19,180 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:21,240 ERROR   gpu       :45495 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-05-24 21:36:21,241 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:21,242 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:23,243 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:23,243 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:23,966 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:24,560 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:24,824 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:36:24,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:36:24,966 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/config.yaml
+2024-05-24 21:36:25,245 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:25,245 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:27,247 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:27,247 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:27,968 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:29,248 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:29,248 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:30,299 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:31,250 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:31,250 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:31,969 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:33,251 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:33,252 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:33,970 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:35,253 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:35,253 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:35,448 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:37,254 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:37,254 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:37,972 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:39,256 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:39,256 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:39,824 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:36:39,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:36:40,952 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:41,257 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:41,257 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:43,259 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:43,259 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:43,974 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:45,261 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:45,261 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:46,054 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:47,262 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:47,262 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:47,975 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:49,264 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:49,264 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:51,081 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:51,156 DEBUG   SystemMonitor:45495 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-05-24 21:36:51,158 DEBUG   SenderThread:45495 [sender.py:send():378] send: stats
+2024-05-24 21:36:51,321 ERROR   gpu       :45495 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-05-24 21:36:51,322 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:51,322 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:53,324 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:53,324 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:53,978 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:54,824 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:36:54,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:36:55,325 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:55,325 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:56,913 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:36:57,326 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:57,326 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:57,979 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:36:59,328 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:36:59,328 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:01,330 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:01,330 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:02,452 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:03,331 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:03,331 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:03,982 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:05,333 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:05,333 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:07,334 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:07,335 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:07,958 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:07,983 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:09,336 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:09,336 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:09,825 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:37:09,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:37:11,337 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:11,338 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:13,339 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:13,339 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:13,812 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:13,985 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:15,341 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:15,341 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:17,342 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:17,343 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:17,987 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:19,172 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:19,344 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:19,344 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:21,159 DEBUG   SenderThread:45495 [sender.py:send():378] send: stats
+2024-05-24 21:37:21,404 ERROR   gpu       :45495 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-05-24 21:37:21,405 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:21,405 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:21,989 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:23,407 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:23,407 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:24,279 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:24,825 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: stop_status
+2024-05-24 21:37:24,825 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: stop_status
+2024-05-24 21:37:25,408 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:25,408 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:25,990 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:27,410 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:27,410 ERROR   gpu       :45495 [interfaces.py:monitor():142] Failed to sample metric: Not Supported
+2024-05-24 21:37:29,055 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: partial_history
+2024-05-24 21:37:29,057 DEBUG   SenderThread:45495 [sender.py:send():378] send: history
+2024-05-24 21:37:29,057 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: summary_record
+2024-05-24 21:37:29,059 INFO    SenderThread:45495 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-24 21:37:29,309 DEBUG   SenderThread:45495 [sender.py:send():378] send: exit
+2024-05-24 21:37:29,309 INFO    SenderThread:45495 [sender.py:send_exit():585] handling exit code: 0
+2024-05-24 21:37:29,309 INFO    SenderThread:45495 [sender.py:send_exit():587] handling runtime: 98
+2024-05-24 21:37:29,310 INFO    SenderThread:45495 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-24 21:37:29,310 INFO    SenderThread:45495 [sender.py:send_exit():593] send defer
+2024-05-24 21:37:29,310 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,310 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 0
+2024-05-24 21:37:29,311 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:29,311 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,311 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 0
+2024-05-24 21:37:29,311 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 1
+2024-05-24 21:37:29,312 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,312 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 1
+2024-05-24 21:37:29,312 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,312 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 1
+2024-05-24 21:37:29,312 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 2
+2024-05-24 21:37:29,312 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,312 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 2
+2024-05-24 21:37:29,312 INFO    HandlerThread:45495 [system_monitor.py:finish():203] Stopping system monitor
+2024-05-24 21:37:29,313 INFO    HandlerThread:45495 [interfaces.py:finish():200] Joined cpu monitor
+2024-05-24 21:37:29,313 INFO    HandlerThread:45495 [interfaces.py:finish():200] Joined disk monitor
+2024-05-24 21:37:29,313 DEBUG   SystemMonitor:45495 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-05-24 21:37:29,313 DEBUG   SystemMonitor:45495 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-05-24 21:37:29,375 ERROR   gpu       :45495 [interfaces.py:aggregate():159] Failed to serialize metric: division by zero
+2024-05-24 21:37:29,375 INFO    HandlerThread:45495 [interfaces.py:finish():200] Joined gpu monitor
+2024-05-24 21:37:29,375 INFO    HandlerThread:45495 [interfaces.py:finish():200] Joined memory monitor
+2024-05-24 21:37:29,375 INFO    HandlerThread:45495 [interfaces.py:finish():200] Joined network monitor
+2024-05-24 21:37:29,376 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,376 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 2
+2024-05-24 21:37:29,376 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 3
+2024-05-24 21:37:29,376 DEBUG   SenderThread:45495 [sender.py:send():378] send: stats
+2024-05-24 21:37:29,376 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,377 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 3
+2024-05-24 21:37:29,378 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,378 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 3
+2024-05-24 21:37:29,378 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 4
+2024-05-24 21:37:29,378 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,378 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 4
+2024-05-24 21:37:29,378 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,378 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 4
+2024-05-24 21:37:29,379 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 5
+2024-05-24 21:37:29,379 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,379 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 5
+2024-05-24 21:37:29,379 DEBUG   SenderThread:45495 [sender.py:send():378] send: summary
+2024-05-24 21:37:29,379 INFO    SenderThread:45495 [sender.py:_save_file():1389] saving file wandb-summary.json with policy end
+2024-05-24 21:37:29,380 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,380 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 5
+2024-05-24 21:37:29,380 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 6
+2024-05-24 21:37:29,380 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,380 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 6
+2024-05-24 21:37:29,380 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,380 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 6
+2024-05-24 21:37:29,381 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 7
+2024-05-24 21:37:29,381 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: status_report
+2024-05-24 21:37:29,381 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:29,381 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 7
+2024-05-24 21:37:29,381 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:29,381 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 7
+2024-05-24 21:37:29,991 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:29,992 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_created():271] file/dir created: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/wandb-summary.json
+2024-05-24 21:37:30,309 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-24 21:37:31,152 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 8
+2024-05-24 21:37:31,152 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: poll_exit
+2024-05-24 21:37:31,152 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:31,153 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 8
+2024-05-24 21:37:31,153 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:31,153 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 8
+2024-05-24 21:37:31,153 INFO    SenderThread:45495 [job_builder.py:build():432] Attempting to build job artifact
+2024-05-24 21:37:31,154 INFO    SenderThread:45495 [job_builder.py:_get_source_type():565] is repo sourced job
+2024-05-24 21:37:31,198 INFO    SenderThread:45495 [job_builder.py:build():541] adding wandb-job metadata file
+2024-05-24 21:37:31,200 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 9
+2024-05-24 21:37:31,201 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:31,201 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 9
+2024-05-24 21:37:31,207 DEBUG   SenderThread:45495 [sender.py:send():378] send: artifact
+2024-05-24 21:37:31,309 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-24 21:37:31,522 INFO    SenderThread:45495 [sender.py:send_artifact():1467] sent artifact job-https___github.com_RaghviBaloni_RAG-GNN_inference.py - {'id': 'QXJ0aWZhY3Q6ODQ0MzgwNTg2', 'state': 'COMMITTED', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjE3NTM4NzIyOQ==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6ODQ0MzgwNTg2', 'versionIndex': 4}}}
+2024-05-24 21:37:31,522 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:31,522 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 9
+2024-05-24 21:37:31,522 INFO    SenderThread:45495 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-05-24 21:37:31,992 INFO    Thread-12 :45495 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:31,993 INFO    SenderThread:45495 [dir_watcher.py:finish():388] scan: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files
+2024-05-24 21:37:31,993 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/config.yaml config.yaml
+2024-05-24 21:37:31,994 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/conda-environment.yaml conda-environment.yaml
+2024-05-24 21:37:31,994 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/wandb-metadata.json wandb-metadata.json
+2024-05-24 21:37:31,994 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/requirements.txt requirements.txt
+2024-05-24 21:37:31,997 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log output.log
+2024-05-24 21:37:32,004 INFO    SenderThread:45495 [dir_watcher.py:finish():402] scan save: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/wandb-summary.json wandb-summary.json
+2024-05-24 21:37:32,005 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 10
+2024-05-24 21:37:32,005 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: poll_exit
+2024-05-24 21:37:32,005 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:32,008 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 10
+2024-05-24 21:37:32,011 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:32,011 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 10
+2024-05-24 21:37:32,011 INFO    SenderThread:45495 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-24 21:37:32,194 INFO    wandb-upload_1:45495 [upload_job.py:push():130] Uploaded file /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/config.yaml
+2024-05-24 21:37:32,311 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-24 21:37:32,311 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: poll_exit
+2024-05-24 21:37:32,318 INFO    wandb-upload_0:45495 [upload_job.py:push():130] Uploaded file /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/conda-environment.yaml
+2024-05-24 21:37:32,356 INFO    wandb-upload_2:45495 [upload_job.py:push():130] Uploaded file /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/requirements.txt
+2024-05-24 21:37:32,452 INFO    wandb-upload_4:45495 [upload_job.py:push():130] Uploaded file /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/wandb-summary.json
+2024-05-24 21:37:32,462 INFO    wandb-upload_3:45495 [upload_job.py:push():130] Uploaded file /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/files/output.log
+2024-05-24 21:37:32,663 INFO    Thread-11 :45495 [sender.py:transition_state():613] send defer: 11
+2024-05-24 21:37:32,663 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:32,663 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 11
+2024-05-24 21:37:32,664 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:32,664 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 11
+2024-05-24 21:37:32,664 INFO    SenderThread:45495 [file_pusher.py:join():175] waiting for file pusher
+2024-05-24 21:37:32,664 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 12
+2024-05-24 21:37:32,664 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:32,664 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 12
+2024-05-24 21:37:32,664 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:32,665 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 12
+2024-05-24 21:37:32,665 INFO    SenderThread:45495 [file_stream.py:finish():601] file stream finish called
+2024-05-24 21:37:32,917 INFO    SenderThread:45495 [file_stream.py:finish():605] file stream finish is done
+2024-05-24 21:37:32,917 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 13
+2024-05-24 21:37:32,917 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:32,917 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 13
+2024-05-24 21:37:32,917 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:32,917 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 13
+2024-05-24 21:37:32,917 INFO    SenderThread:45495 [sender.py:transition_state():613] send defer: 14
+2024-05-24 21:37:32,918 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: defer
+2024-05-24 21:37:32,918 DEBUG   SenderThread:45495 [sender.py:send():378] send: final
+2024-05-24 21:37:32,918 INFO    HandlerThread:45495 [handler.py:handle_request_defer():184] handle defer: 14
+2024-05-24 21:37:32,918 DEBUG   SenderThread:45495 [sender.py:send():378] send: footer
+2024-05-24 21:37:32,918 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: defer
+2024-05-24 21:37:32,918 INFO    SenderThread:45495 [sender.py:send_request_defer():609] handle sender defer: 14
+2024-05-24 21:37:32,919 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-24 21:37:32,920 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: poll_exit
+2024-05-24 21:37:32,920 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: poll_exit
+2024-05-24 21:37:32,920 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: poll_exit
+2024-05-24 21:37:32,921 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: server_info
+2024-05-24 21:37:32,921 DEBUG   SenderThread:45495 [sender.py:send_request():405] send_request: server_info
+2024-05-24 21:37:32,923 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: get_summary
+2024-05-24 21:37:32,924 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: sampled_history
+2024-05-24 21:37:32,924 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: internal_messages
+2024-05-24 21:37:32,990 INFO    MainThread:45495 [wandb_run.py:_footer_history_summary_info():3994] rendering history
+2024-05-24 21:37:32,990 INFO    MainThread:45495 [wandb_run.py:_footer_history_summary_info():4026] rendering summary
+2024-05-24 21:37:32,991 INFO    MainThread:45495 [wandb_run.py:_footer_sync_info():3953] logging synced files
+2024-05-24 21:37:32,991 DEBUG   HandlerThread:45495 [handler.py:handle_request():158] handle_request: shutdown
+2024-05-24 21:37:32,991 INFO    HandlerThread:45495 [handler.py:finish():882] shutting down handler
+2024-05-24 21:37:33,921 INFO    WriterThread:45495 [datastore.py:close():296] close: /home_ssd2/raghvib/RAG-GNN/wandb/run-20240524_213550-onz68c49/run-onz68c49.wandb
+2024-05-24 21:37:33,990 INFO    SenderThread:45495 [sender.py:finish():1545] shutting down sender
+2024-05-24 21:37:33,990 INFO    SenderThread:45495 [file_pusher.py:finish():169] shutting down file pusher
+2024-05-24 21:37:33,990 INFO    SenderThread:45495 [file_pusher.py:join():175] waiting for file pusher

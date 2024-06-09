@@ -55,7 +55,11 @@ def normalize(s: str) -> str:
 def match(s1: str, s2: str) -> bool:
     s1 = normalize(s1)
     s2 = normalize(s2)
-    return s2 in s1
+    #split the strings into words
+    s1_words = set(s1.split())
+    s2_words = set(s2.split())
+    #Check if the key elements of s2 (answer) are in s1(prediction)
+    return s2_words.issubset(s1_words)
 
 
 def eval_f1(prediction, answer):
@@ -65,9 +69,9 @@ def eval_f1(prediction, answer):
     prediction_str = " ".join(prediction)
     for a in answer:
         if match(prediction_str, a):
-            matched += 1
-    precision = matched / len(prediction)
-    recall = matched / len(answer)
+            matched += 1    
+    precision = matched / len(prediction) 
+    recall = matched / len(answer) 
     if precision + recall == 0:
         return 0, precision, recall
     else:
@@ -88,6 +92,74 @@ def eval_hit(prediction, answer):
             return 1
     return 0
 
+
+def get_accuracy_goodreads(eval_output, path):
+    #print(eval_output) #to check the length of eval_output	
+    #for d in eval_output:
+    #	for key in d:
+     #       print(f"Key: {key}, Length: {len(d[key])}")
+    df = pd.concat([pd.DataFrame(d) for d in eval_output])
+    with open(path, "w") as f:
+        for _, row in df.iterrows():
+            f.write(json.dumps(dict(row)) + "\n")
+
+    # Load results
+    acc_list = []
+    hit_list = []
+    f1_list = []
+    precission_list = []
+    recall_list = []
+
+    for prediction, answer in zip(df.pred.tolist(), df.label.tolist()):
+
+        #Print raw prediction and answer
+       # print(f"Raw Prediction: {prediction}")
+       # print(f"Raw Answer: {answer}")
+
+        #prediction= prediction.replace(".", "\n") 
+        prediction = [prediction]
+        answer= ["".join(answer.split("|"))]
+
+        # Create a DataFrame with the predictions and answers
+        results_df = pd.DataFrame({
+            'Prediction': df.pred.tolist(),
+            'Answer': df.label.tolist()
+        })
+
+        # Write the DataFrame to a text file
+        results_df.to_csv('dataset/goodreads/result/prediction.txt', sep='\t', index=False)
+ 
+        #Print processed prediction and answer
+        #print(f"Processed Prediction: {prediction}")
+        #print(f"Processed Answer: {answer}")
+
+        #prediction = prediction.split("\n")
+        f1_score, precision_score, recall_score = eval_f1(prediction, answer)
+        f1_list.append(f1_score)
+        precission_list.append(precision_score)
+        recall_list.append(recall_score)
+        prediction_str = " ".join(prediction)
+        acc = eval_acc(prediction_str, answer)
+        hit = eval_hit(prediction_str, answer)
+        acc_list.append(acc)
+        hit_list.append(hit)
+
+    acc = sum(acc_list) * 100 / len(acc_list)
+    hit = sum(hit_list) * 100 / len(hit_list)
+    f1 = sum(f1_list) * 100 / len(f1_list)
+    pre = sum(precission_list) * 100 / len(precission_list)
+    recall = sum(recall_list) * 100 / len(recall_list)
+
+    print(f"Accuracy: {acc:.4f}")
+    print(f"Hit: {hit:.4f}")
+    print(f"Precision: {pre:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1: {f1:.4f}")
+    #print(f"Answer: {answer}")
+    #print(f"Prediction: {prediction}")
+
+
+    return hit
 
 def get_accuracy_webqsp(eval_output, path):
     df = pd.concat([pd.DataFrame(d) for d in eval_output])
@@ -139,4 +211,5 @@ eval_funcs = {
     "scene_graphs_baseline": get_accuracy_gqa,
     "webqsp": get_accuracy_webqsp,
     "webqsp_baseline": get_accuracy_webqsp,
+    "goodreads": get_accuracy_goodreads,
 }

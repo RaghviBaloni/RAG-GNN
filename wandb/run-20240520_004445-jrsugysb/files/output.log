@@ -1,0 +1,196 @@
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='goodreads', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='13b', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=64, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+inherit model weights from sentence-transformers/all-roberta-large-v1
+Loading LLAMA
+100%|██████████████████████████████████████| 3600/3600 [00:00<00:00, 1830241.75it/s]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+tokenizer_config.json: 100%|████████████████████████| 776/776 [00:00<00:00, 642kB/s]
+tokenizer.model: 100%|███████████████████████████| 500k/500k [00:00<00:00, 58.4MB/s]
+special_tokens_map.json: 100%|██████████████████████| 414/414 [00:00<00:00, 371kB/s]
+tokenizer.json: 100%|██████████████████████████| 1.84M/1.84M [00:00<00:00, 4.85MB/s]
+config.json: 100%|██████████████████████████████████| 610/610 [00:00<00:00, 507kB/s]
+model.safetensors.index.json: 100%|████████████| 33.4k/33.4k [00:00<00:00, 24.7MB/s]
+Downloading shards:   0%|                                     | 0/3 [00:00<?, ?it/s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downloading shards:  33%|█████████▎                  | 1/3 [01:43<03:27, 103.90s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downloading shards:  67%|██████████████████▋         | 2/3 [03:25<01:42, 102.69s/it]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Downloading shards: 100%|████████████████████████████| 3/3 [05:30<00:00, 110.05s/it]
+
+
+Loading checkpoint shards: 100%|██████████████████████| 3/3 [00:04<00:00,  1.58s/it]
+Freezing LLAMA!
+Finish loading LLAMA!
+generation_config.json: 100%|███████████████████████| 188/188 [00:00<00:00, 174kB/s]
+WARNING:root:Some parameters are on the meta device device because they were offloaded to the cpu.
+
+
+ 67%|████████████████████████████████                | 2/3 [09:14<04:37, 277.92s/it]
+Accuracy: 40.0000
+Hit: 40.0000
+Precision: 3.4848
+Recall: 40.0000
+F1: 6.4103
+100%|████████████████████████████████████████████████| 3/3 [13:46<00:00, 275.62s/it]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/torch/cuda/memory.py:303: FutureWarning: torch.cuda.reset_max_memory_allocated now calls torch.cuda.reset_peak_memory_stats, which resets /all/ peak memory stats.
+  warnings.warn(

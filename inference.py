@@ -26,9 +26,10 @@ def main(args):
 
     dataset = load_dataset[args.dataset]()
     idx_split = dataset.get_idx_split()
+    args.eval_batch_size = args.eval_batch_size // 16 
 
     # Step 2: Build Node Classification Dataset
-    test_dataset = [dataset[i] for i in idx_split['test']]
+    test_dataset = [dataset[i] for i in idx_split['test']]  #Only first 2 samples
     test_loader = DataLoader(test_dataset, batch_size=args.eval_batch_size, drop_last=False, pin_memory=True, shuffle=False, collate_fn=collate_fn)
 
     # Step 3: Build Model
@@ -42,8 +43,11 @@ def main(args):
     for _, batch in enumerate(test_loader):
         with torch.no_grad():
             output = model.inference(batch)
+            #print("Raw Model Output:", output) #Print raw model output to check
             eval_output.append(output)
+            del output #delete the variable onve done
 
+        torch.cuda.empty_cache() #Free up GPU Memory
         progress_bar_test.update(1)
 
     # Step 5. Post-processing & Evaluating

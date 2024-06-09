@@ -1,0 +1,24 @@
+Namespace(model_name='inference_llm', project='project_g_retriever', seed=0, dataset='goodreads', lr=1e-05, wd=0.05, patience=2, batch_size=8, grad_steps=2, num_epochs=10, warmup_epochs=1, eval_batch_size=16, llm_model_name='claude', llm_model_path='', llm_frozen='True', llm_num_virtual_tokens=10, output_dir='output', max_txt_len=512, max_new_tokens=32, gnn_model_name='gat', gnn_num_layers=4, gnn_in_dim=1024, gnn_hidden_dim=1024, gnn_num_heads=4, gnn_dropout=0.0)
+inherit model weights from sentence-transformers/all-roberta-large-v1
+100%|██████████████████████████████████████| 3600/3600 [00:00<00:00, 1772865.38it/s]
+/home_ssd2/raghvib/anaconda3/envs/g_retriever/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+
+
+
+
+
+
+
+
+
+ 90%|███████████████████████████████████████████▏    | 9/10 [00:23<00:02,  2.23s/it]
+Processed Prediction:  Based on the detailed commentary on Cicero's political speeches and analysis of the transition from Roman Republic to Empire, I predict this edition of Philippics I-II to be a non-fiction classical history or political text
+100%|███████████████████████████████████████████████| 10/10 [00:25<00:00,  2.33s/it]Traceback (most recent call last):
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 65, in <module>
+    main(args)
+  File "/home_ssd2/raghvib/RAG-GNN/inference.py", line 56, in main
+    acc = eval_funcs[args.dataset](eval_output, path)
+  File "/home_ssd2/raghvib/RAG-GNN/src/utils/evaluate.py", line 127, in get_accuracy_goodreads
+    results.append(processed_prediction)
+NameError: name 'processed_prediction' is not defined

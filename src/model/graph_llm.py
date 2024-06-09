@@ -31,7 +31,7 @@ class GraphLLM(torch.nn.Module):
 
         print('Loading LLAMA')
         kwargs = {
-            "max_memory": {0: '80GiB', 1: '80GiB'},
+            "max_memory": {0: '10GiB'},
             "device_map": "auto",
             "revision": "main",
         }
@@ -45,7 +45,7 @@ class GraphLLM(torch.nn.Module):
             torch_dtype=torch.float16,
             low_cpu_mem_usage=True,
             **kwargs
-        )
+        )  #Load the model to cpu first (Memory optimization)
 
         if args.llm_frozen == 'True':
             print("Freezing LLAMA!")
@@ -71,7 +71,7 @@ class GraphLLM(torch.nn.Module):
             )
             model = get_peft_model(model, config)
 
-        self.model = model
+        self.model = model  #Mov ethe model to GPU after loading
         print('Finish loading LLAMA!')
 
         self.graph_encoder = load_gnn_model[args.gnn_model_name](
@@ -95,7 +95,7 @@ class GraphLLM(torch.nn.Module):
     def device(self):
         return list(self.parameters())[0].device
 
-    def maybe_autocast(self, dtype=torch.bfloat16):
+    def maybe_autocast(self, dtype=torch.float16):
         # if on cpu, don't use autocast
         # if on gpu, use autocast with dtype if provided, otherwise use torch.float16
         enable_autocast = self.device != torch.device("cpu")
