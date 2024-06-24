@@ -71,8 +71,15 @@ def step_one():
     # Load the preprocessed data
     filter_data_v5 = pickle.load(open(f'{path}/books_filtered.pkl', 'rb'))
 
+    # Load the entire dataset
+    with open(f'{path}/goodreads_books.json') as f:
+        all_books_list = json.load(f)
+
     # Construct book_dict: key book_id, value book_info_dict
     book_dict = {b['book_id']: b for b in tqdm(filter_data_v5)}
+
+    # Convert the list of all books into a dictionary
+    all_books_data = {book['book_id']: book for book in all_books_list}
 
     # Generate nodes and edges
     os.makedirs(path_nodes, exist_ok=True)
@@ -82,7 +89,7 @@ def step_one():
         nodes = {}
         edges = []
 
-        #Added new to add description(till authors)
+        #Add node and add edge
         def add_node(node_attr, node_dict, node_list):
             if node_attr not in node_dict:
                 node_dict[node_attr] = len(node_dict)
@@ -115,17 +122,22 @@ def step_one():
             else:
                 print(f"Ignoring author with non-hashable author_id: {author_id}")
                 
-        # Similar books
-        with open ('dataset/goodreads/goodreads_books.json') as f:
-            all_books_data = json.load(f) 
-
-        for similar_book in book_data.get('similar_books', []):
+        # Similar books 
+            similar_books = book_data.get('similar_books', [])
+            #print(f"Similar books for book_id {book_id}: {similar_books}") 
             #Check if the book exists in the larger dataset
-            if similar_book in all_books_data:
-                similar_book_node = add_node(similar_book, nodes, nodes)
-                add_edge(book_node_id, 'similar_book', similar_book_node, edges)
-            else:
-                print(f"Book ID {similar_book} not found in the dataset.")
+            for similar_book in similar_books:
+                similar_book_data = all_books_data.get(similar_book)
+                if similar_book_data is None:
+                    print(f"Book ID {similar_book} not found in the dataset.")
+                    continue
+                #print(f"Similar book data for book_id {similar_book}: {similar_book_data}")  # Print the similar_book_data
+                similar_book_title = similar_book_data.get('title', '')
+                if similar_book_title:
+                    similar_book_node = add_node(similar_book_title, nodes, nodes)
+                    add_edge(book_node_id, 'similar_book', similar_book_node, edges)
+                else:
+                    print(f"Title not found for similar book ID {similar_book}")
 
         # Shelves
         #for shelf in book_data.get('popular_shelves', []):
@@ -177,7 +189,7 @@ def step_two():
         embedding = text2embedding(model, tokenizer, device, [description])
         description_embeddings.append(embedding)
         pbar.update(1)  # Update the progress bar
-    pbar.close()  # Close the progress bar
+    pbar.close()  
     
     print("Number of description embeddings:", len(description_embeddings))
 

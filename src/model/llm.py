@@ -108,7 +108,7 @@ class LLM(torch.nn.Module):
         questions = self.tokenizer(samples["question"], add_special_tokens=False)
         descriptions = self.tokenizer(samples["desc"], add_special_tokens=False)
         labels = self.tokenizer(samples["label"], add_special_tokens=False)
-        #genres = self.tokenizer(samples["book_genre"], add_special_tokens=False)
+        
 
         # encode special tokens
         eos_tokens = self.tokenizer(EOS, add_special_tokens=False)

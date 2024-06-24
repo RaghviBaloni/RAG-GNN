@@ -40,7 +40,7 @@ class GoodreadsDataset(Dataset):
     def __getitem__(self, idx):
         book_id = self.book_ids[idx] #Use the index to get the bookID
         book_data = self.book_dict[book_id]
-        question = f"Question: Predict the genre (fiction, non-fiction or romance) of the book '{book_data['title']}'.\nAnswer: "
+        question = f"Question: Predict the genre: fiction, non-fiction or romance, of the book '{book_data['title']}'.\n Prediction: \n Explanation: "
         graph = torch.load(f'{cached_graph}/{book_id}.pt')
         desc = open(f'{cached_desc}/{book_id}.txt', 'r').read()
         label =('|').join(book_data['genres']).lower()

@@ -29,7 +29,7 @@ def main(args):
     args.eval_batch_size = args.eval_batch_size // 16 
 
     # Step 2: Build Node Classification Dataset
-    test_dataset = [dataset[i] for i in idx_split['test']]  #Only first 2 samples
+    test_dataset = [dataset[i] for i in idx_split['test'][:5]]  #Only first 2 samples
     test_loader = DataLoader(test_dataset, batch_size=args.eval_batch_size, drop_last=False, pin_memory=True, shuffle=False, collate_fn=collate_fn)
 
     # Step 3: Build Model
