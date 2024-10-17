@@ -6,28 +6,30 @@ import string
 def normalize(s: str) -> str:
     """Lower text and remove punctuation, articles and extra whitespace."""
     s = s.lower()
-    exclude = set(string.punctuation)
-    s = "".join(char for char in s if char not in exclude)
-    s = re.sub(r"\b(a|an|the)\b", " ", s)
+    #exclude = set(string.punctuation)
+    #s = "".join(char for char in s if char not in exclude)
+    #s = re.sub(r"\b(a|an|the)\b", " ", s)
     # remove <pad> token:
-    s = re.sub(r"\b(<pad>)\b", " ", s)
-    s = " ".join(s.split())
+    #s = re.sub(r"\b(<pad>)\b", " ", s)
+    #s = " ".join(s.split())
     return s
 
 
 def match(s1: str, s2: str) -> bool:
     s1 = normalize(s1)
     s2 = normalize(s2)
-
-    # Check for patterns indicating the question is being repeated
-    if s1.startswith ("unfortunately"):
+    
+    #Ensure that the predicted label is enclosed in XML tags
+    if '<prediction>' not in s1 or '</prediction>' not in s1:
         return False
-
-    #split the strings into words
-    s1_words = set(s1.split())
-    s2_words = set(s2.split())
-    #Check if the key elements of s2 (answer) are in s1(prediction)
-    return s2_words.issubset(s1_words)
+    #Extract the predicted label from s1
+    predicted_label =s1.split('<prediction>')[1].split('</prediction>')[0].strip()  
+    
+    #Normalize the predicted label
+    predicted_label = normalize(predicted_label)
+    
+    #Check if the key elements of s2 (answer) are in predicted label
+    return s2 in predicted_label
 
 
 def eval_f1(prediction, answer):
@@ -122,6 +124,69 @@ def get_accuracy_goodreads(eval_output, path):
 
     return hit
 
+def get_accuracy_dblp(eval_output, path):
+    #print(eval_output) #to check the length of eval_output	
+    df = pd.concat([pd.DataFrame(d) for d in eval_output])
+    with open(path, "w") as f:
+        for _, row in df.iterrows():
+            f.write(json.dumps(dict(row)) + "\n")
+
+    # Load results
+    acc_list = []
+    hit_list = []
+    f1_list = []
+    precission_list = []
+    recall_list = []
+
+    for prediction, answer in zip(df.pred.tolist(), df.label.tolist()):
+
+        #Print raw prediction and answer
+       # print(f"Raw Prediction: {prediction}")
+       # print(f"Raw Answer: {answer}")
+ 
+        prediction = [prediction]
+        answer= ["".join(answer.split("|"))]
+
+        # Create a DataFrame with the predictions and answers
+        results_df = pd.DataFrame({
+            'Prediction': df.pred.tolist(),
+            'Answer': df.label.tolist()
+        })
+
+        # Write the DataFrame to a text file
+        results_df.to_csv('dataset/dblp/result/prediction.txt', sep='\t', index=False)
+ 
+        #Print processed prediction and answer
+        #print(f"Processed Prediction: {prediction}")
+        #print(f"Processed Answer: {answer}")
+
+        #prediction = prediction.split("\n")
+        f1_score, precision_score, recall_score = eval_f1(prediction, answer)
+        f1_list.append(f1_score)
+        precission_list.append(precision_score)
+        recall_list.append(recall_score)
+        prediction_str = " ".join(prediction)
+        acc = eval_acc(prediction_str, answer)
+        hit = eval_hit(prediction_str, answer)
+        acc_list.append(acc)
+        hit_list.append(hit)
+
+    acc = sum(acc_list) * 100 / len(acc_list)
+    hit = sum(hit_list) * 100 / len(hit_list)
+    f1 = sum(f1_list) * 100 / len(f1_list)
+    pre = sum(precission_list) * 100 / len(precission_list)
+    recall = sum(recall_list) * 100 / len(recall_list)
+
+    print(f"Accuracy: {acc:.4f}")
+    print(f"Hit: {hit:.4f}")
+    print(f"Precision: {pre:.4f}")
+    print(f"Recall: {recall:.4f}")
+    print(f"F1: {f1:.4f}")
+
+    return hit
+
 eval_funcs = {
     "goodreads": get_accuracy_goodreads,
+    "dblp": get_accuracy_dblp,
 }
+

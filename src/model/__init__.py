@@ -17,4 +17,5 @@ llama_model_path = {
     '7b_chat': 'meta-llama/Llama-2-7b-chat-hf',
     '13b_chat': 'meta-llama/Llama-2-13b-chat-hf',
     'claude': 'src/model/claude',
+    'dblpclaude': 'src/model/dblpclaude',
 }

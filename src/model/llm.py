@@ -5,6 +5,7 @@ import torchvision.models as models
 from torch.cuda.amp import autocast as autocast
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.model.claude import Claude #Importing Claude from claude.py
+from src.model.dblpclaude import Claude #Importing Claude from dblpclaude.py
 from peft import (
     LoraConfig,
     get_peft_model,
@@ -29,7 +30,7 @@ class LLM(torch.nn.Module):
         self.max_txt_len = args.max_txt_len
         self.max_new_tokens = args.max_new_tokens
         
-        if args.llm_model_name == "claude":
+        if args.llm_model_name == "claude" or args.llm_model_name == "dblpclaude":
             
             self.model = Claude(
             	region_name=None,
@@ -159,13 +160,17 @@ class LLM(torch.nn.Module):
         if isinstance(self.model, Claude):
             # Using Claude for inference
             question = samples["question"]
-            desc = samples["desc"]
-            #graph = samples["graph"]
-            prompt = f"Human: {desc} {question} Assistant: "  #For claude the prompt should start with Human:
+            description = samples["desc"]
+            pred = []
+            for desc, que in zip(description, question): 
+                #Create prompt using system message and the specific question
+                prompt = self.model.create_prompt(desc, que) 
+                #generate prediction
+                response = self.model._call(prompt, max_new_tokens=self.max_new_tokens)
+                pred.append(response)
             #print("prompt:", prompt) #check the prompt generated
-            pred = self.model._call(prompt, max_new_tokens=self.max_new_tokens)
             #Ensure that pred has same length as other keys:
-            pred = [pred] * len(samples["id"])
+            #pred = [pred] * len(samples["id"])
             return {'id': samples['id'],
                     'pred': pred,
                     'label': samples['label'],
