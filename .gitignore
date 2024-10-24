@@ -1,4 +1,5 @@
-dataset/
+dataset/dblp
+dataset/goodreads
 dblp.v12.json
 dblp.v12.7z
 data_processing_DBLP.py
