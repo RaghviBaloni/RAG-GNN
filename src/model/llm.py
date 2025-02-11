@@ -6,6 +6,8 @@ from torch.cuda.amp import autocast as autocast
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from src.model.claude import Claude #Importing Claude from claude.py
 from src.model.dblpclaude import Claude #Importing Claude from dblpclaude.py
+from src.model.dblpopenai import OpenAIModeldblp
+from src.model.goodreadsopenai import OpenAIModel
 from peft import (
     LoraConfig,
     get_peft_model,
@@ -37,6 +39,10 @@ class LLM(torch.nn.Module):
             	credentials_profile_name=None,
             	endpoint_url=None,           	
             )
+        elif args.llm_model_name == "openai":
+            self.model = OpenAIModeldblp(model="gpt-4")
+        elif args.llm_model_name == "goodreadsopenai":
+            self.model = OpenAIModel(model="gpt-4")
         else:
 
             print('Loading LLAMA')
@@ -102,8 +108,8 @@ class LLM(torch.nn.Module):
             return contextlib.nullcontext()
 
     def forward(self, samples):
-        if isinstance(self.model, Claude):
-            raise NotImplementedError("Training is not implemented for Claude.")
+        if isinstance(self.model, Claude) or isinstance(self.model, OpenAIModel) or isinstance(self.model, OpenAIModel):
+            raise NotImplementedError("Training is not implemented for Claude and OpenAI.")
         # Existing forward logic for other models
         # encode description, questions and labels
         questions = self.tokenizer(samples["question"], add_special_tokens=False)
@@ -157,8 +163,8 @@ class LLM(torch.nn.Module):
 
     def inference(self, samples):
     
-        if isinstance(self.model, Claude):
-            # Using Claude for inference
+        if isinstance(self.model, Claude) or isinstance(self.model, OpenAIModel) or isinstance(self.model, OpenAIModeldblp):
+            # Using Claude or OpenAI for inference
             question = samples["question"]
             description = samples["desc"]
             pred = []
@@ -166,7 +172,7 @@ class LLM(torch.nn.Module):
                 #Create prompt using system message and the specific question
                 prompt = self.model.create_prompt(desc, que) 
                 #generate prediction
-                response = self.model._call(prompt, max_new_tokens=self.max_new_tokens)
+                response = self.model._call(prompt)
                 pred.append(response)
             #print("prompt:", prompt) #check the prompt generated
             #Ensure that pred has same length as other keys:
