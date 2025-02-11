@@ -6,3 +6,4 @@ data_processing_DBLP.py
 dblp_v2.pkl
 wandb/
 Miniconda3-latest-Linux-x86_64.sh
+output/
