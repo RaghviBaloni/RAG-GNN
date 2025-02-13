@@ -44,7 +44,7 @@ Use the preprocessing files under dataset folder to preprocess the datasets
 cd dataset/
 ```
 
-Navigate to the preprocessig folder under 'src/dataset/preprocess/' and modify the path for the training data
+Navigate to the preprocessig folder under ``src/dataset/preprocess/`` and modify the path for the training data
 
 ```sh
 python -m src.dataset.preprocess.goodreads
@@ -55,7 +55,7 @@ python -m src.dataset.dblp
 
 ## LLM Inference for generating Predictions and Explanations
 
-Replace path to the llm in the 'src/model/__init__.py' if needed
+Replace path to the llm in the ``src/model/__init__.py`` if needed
 
 ```sh
 python inference.py --dataset name of the dataset --model_name inference_llm --llm_model_name Name of the llm (openai/claude)
